@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage ('build') {
+            npm install
+        }
+        stage ('test') {
             npm test
         }
     }
