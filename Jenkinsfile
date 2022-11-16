@@ -2,10 +2,14 @@ pipeline {
     agent any
     stages {
         stage ('build') {
-            npm install
+            steps {
+                npm install
+                }
         }
         stage ('test') {
-            npm test
+            steps {
+                npm test
+            }
         }
     }
     post {
